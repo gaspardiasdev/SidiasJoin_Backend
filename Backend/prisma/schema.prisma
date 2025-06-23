@@ -1,0 +1,130 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  cliente
+  prestador
+  admin
+}
+
+enum Status {
+  pendente
+  ativo
+  suspenso
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String
+  email        String    @unique
+  passwordHash String
+  role         Role      @default(cliente)
+  phone        String?
+  location     String?
+  lat          Decimal?  @db.Decimal(10, 6)
+  lng          Decimal?  @db.Decimal(10, 6)
+  imageUrl     String?
+  about        String?
+  status       Status    @default(pendente)
+  verified     Boolean   @default(false)
+  isOnline     Boolean   @default(false)
+  lastSeen     DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  services        ProviderService[]
+  reviewsGiven    Review[]          @relation("ClientReviews")
+  reviewsReceived Review[]          @relation("ProviderReviews")
+  subscription    Subscription?
+  likesGiven      Like[]            @relation("ClientLikes")
+  likesReceived   Like[]            @relation("ProviderLikes")
+  adminActions    AdminAction[]     @relation("AdminActions")
+  actionsTaken    AdminAction[]     @relation("ActionsTakenByAdmin")
+}
+
+model Category {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+
+  services Service[]
+}
+
+model Service {
+  id          Int      @id @default(autoincrement())
+  categoryId  Int
+  name        String   @unique
+  description String?
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  category  Category          @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  providers ProviderService[]
+}
+
+model ProviderService {
+  providerId  Int
+  serviceId   Int
+  primaryFlag Boolean @default(false)
+
+  provider User    @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  service  Service @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@id([providerId, serviceId])
+}
+
+model Review {
+  id         Int      @id @default(autoincrement())
+  providerId Int
+  clientId   Int
+  rating     Int
+  comment    String?
+  createdAt  DateTime @default(now())
+
+  provider User @relation("ProviderReviews", fields: [providerId], references: [id], onDelete: Cascade)
+  client   User @relation("ClientReviews", fields: [clientId], references: [id], onDelete: Cascade)
+
+  @@unique([providerId, clientId])
+}
+
+model Subscription {
+  id         Int       @id @default(autoincrement())
+  providerId Int       @unique
+  paid       Boolean   @default(false)
+  proofUrl   String?
+  startsAt   DateTime?
+  expiresAt  DateTime?
+  createdAt  DateTime  @default(now())
+
+  provider User @relation(fields: [providerId], references: [id])
+}
+
+model Like {
+  clientId   Int
+  providerId Int
+  createdAt  DateTime @default(now())
+
+  client   User @relation("ClientLikes", fields: [clientId], references: [id], onDelete: Cascade)
+  provider User @relation("ProviderLikes", fields: [providerId], references: [id], onDelete: Cascade)
+
+  @@id([clientId, providerId])
+}
+
+model AdminAction {
+  id         Int      @id @default(autoincrement())
+  adminId    Int
+  providerId Int
+  action     String
+  note       String?
+  createdAt  DateTime @default(now())
+
+  admin    User @relation("ActionsTakenByAdmin", fields: [adminId], references: [id], onDelete: Cascade)
+  provider User @relation("AdminActions", fields: [providerId], references: [id], onDelete: Cascade)
+}

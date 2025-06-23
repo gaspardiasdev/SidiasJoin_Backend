@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "João Silva",
+    "email": "joao1@example.com",
+    "passwordHash": "hashed_password_1",
+    "role": "cliente"
+  },
+  {
+    "id": 2,
+    "name": "Maria Oliveira",
+    "email": "maria2@example.com",
+    "passwordHash": "hashed_password_2",
+    "role": "cliente"
+  },
+  {
+    "id": 3,
+    "name": "Carlos Pereira",
+    "email": "carlos3@example.com",
+    "passwordHash": "hashed_password_3",
+    "role": "cliente"
+  },
+  {
+    "id": 4,
+    "name": "Ana Souza",
+    "email": "ana4@example.com",
+    "passwordHash": "hashed_password_4",
+    "role": "cliente"
+  },
+  {
+    "id": 5,
+    "name": "Luís Costa",
+    "email": "luis5@example.com",
+    "passwordHash": "hashed_password_5",
+    "role": "cliente"
+  },
+  {
+    "id": 6,
+    "name": "Patrícia Gomes",
+    "email": "patricia6@example.com",
+    "passwordHash": "hashed_password_6",
+    "role": "cliente"
+  },
+  {
+    "id": 7,
+    "name": "Ricardo Mendes",
+    "email": "ricardo7@example.com",
+    "passwordHash": "hashed_password_7",
+    "role": "cliente"
+  },
+  {
+    "id": 8,
+    "name": "Fernanda Lima",
+    "email": "fernanda8@example.com",
+    "passwordHash": "hashed_password_8",
+    "role": "cliente"
+  },
+  {
+    "id": 9,
+    "name": "Diego Rocha",
+    "email": "diego9@example.com",
+    "passwordHash": "hashed_password_9",
+    "role": "cliente"
+  }
+]

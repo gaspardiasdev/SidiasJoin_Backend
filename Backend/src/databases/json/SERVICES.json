@@ -1,0 +1,122 @@
+[
+  {
+    "id": 10,
+    "categoryId": 11,
+    "name": "Revisão de motor",
+    "description": "Serviço completo de revisão e troca de peças do motor."
+  },
+  {
+    "id": 11,
+    "categoryId": 14,
+    "name": "Design gráfico",
+    "description": "Criação de logotipos, banners e identidade visual."
+  },
+  {
+    "id": 12,
+    "categoryId": 17,
+    "name": "Aula de futebol",
+    "description": "Treinamentos técnicos e táticos para jogadores iniciantes."
+  },
+  {
+    "id": 13,
+    "categoryId": 16,
+    "name": "Manutenção de jardim",
+    "description": "Corte de grama, poda de plantas e adubação."
+  },
+  {
+    "id": 14,
+    "categoryId": 13,
+    "name": "Manicure e pedicure",
+    "description": "Serviço completo de unhas com esmaltação."
+  },
+  {
+    "id": 15,
+    "categoryId": 10,
+    "name": "Conserto de celulares",
+    "description": "Troca de tela, bateria e conserto de hardware."
+  },
+  {
+    "id": 16,
+    "categoryId": 14,
+    "name": "Montagem de móveis",
+    "description": "Montagem e desmontagem de móveis residenciais."
+  },
+  {
+    "id": 17,
+    "categoryId": 15,
+    "name": "Adestramento de cães",
+    "description": "Treinamento comportamental e comandos básicos."
+  },
+  {
+    "id": 18,
+    "categoryId": 12,
+    "name": "Fotografia de imóveis",
+    "description": "Fotos profissionais para anúncios de casas e apartamentos."
+  },
+  {
+    "id": 19,
+    "categoryId": 24,
+    "name": "Pintura residencial",
+    "description": "Pintura de paredes internas e externas."
+  },
+  {
+    "id": 20,
+    "categoryId": 14,
+    "name": "Criação de sites",
+    "description": "Desenvolvimento de sites institucionais e lojas virtuais."
+  },
+  {
+    "id": 21,
+    "categoryId": 22,
+    "name": "Aula particular de matemática",
+    "description": "Refreforço escolar para ensino fundamental e médio."
+  },
+  {
+    "id": 22,
+    "categoryId": 17,
+    "name": "Aula de natação",
+    "description": "Aulas individuais para todas as idades."
+  },
+  {
+    "id": 23,
+    "categoryId": 24,
+    "name": "Serviço de pedreiro",
+    "description": "Construções, reformas e pequenos reparos."
+  },
+  {
+    "id": 24,
+    "categoryId": 13,
+    "name": "Corte de cabelo masculino",
+    "description": "Corte com máquina e tesoura, finalização com navalha."
+  },
+  {
+    "id": 25,
+    "categoryId": 10,
+    "name": "Instalação de TV",
+    "description": "Fixação em parede, configuração e cabeamento."
+  },
+  {
+    "id": 26,
+    "categoryId": 14,
+    "name": "Tradução de documentos",
+    "description": "Tradução de português para inglês e francês."
+  },
+  {
+    "id": 27,
+    "categoryId": 16,
+    "name": "Instalação elétrica residencial",
+    "description": "Fiação, disjuntores e tomadas."
+  },
+  {
+    "id": 28,
+    "categoryId": 23,
+    "name": "Avaliação de antiguidades",
+    "description": "Perícia e estimativa de valor para peças antigas."
+  },
+  {
+    "id": 29,
+    "categoryId": 12,
+    "name": "Consultoria imobiliária",
+    "description": "Apoio para compra e venda de imóveis."
+  }
+]

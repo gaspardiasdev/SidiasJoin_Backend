@@ -1,0 +1,77 @@
+[
+  {
+    "id": 10,
+    "name": "Eletrônicos",
+    "description": "Dispositivos como celulares, TVs, computadores e acessórios."
+  },
+  {
+    "id": 11,
+    "name": "Veículos",
+    "description": "Carros, motos, caminhões e outros tipos de veículos."
+  },
+  {
+    "id": 12,
+    "name": "Imóveis",
+    "description": "Casas, apartamentos, terrenos e espaços comerciais."
+  },
+  {
+    "id": 13,
+    "name": "Moda e Beleza",
+    "description": "Roupas, calçados, cosméticos e acessórios."
+  },
+  {
+    "id": 14,
+    "name": "Serviços",
+    "description": "Ofertas de serviços como manutenção, transporte e design."
+  },
+  {
+    "id": 15,
+    "name": "Animais",
+    "description": "Animais de estimação e produtos relacionados."
+  },
+  {
+    "id": 16,
+    "name": "Casa e Jardim",
+    "description": "Móveis, decoração, ferramentas e utensílios domésticos."
+  },
+  {
+    "id": 17,
+    "name": "Esportes",
+    "description": "Artigos esportivos e equipamentos de academia."
+  },
+  {
+    "id": 18,
+    "name": "Música e Hobbies",
+    "description": "Instrumentos musicais, jogos, brinquedos e coleções."
+  },
+  {
+    "id": 19,
+    "name": "Bebês e Crianças",
+    "description": "Produtos infantis como carrinhos, roupas e brinquedos."
+  },
+  {
+    "id": 20,
+    "name": "Agro e Indústria",
+    "description": "Máquinas agrícolas, ferramentas e suprimentos industriais."
+  },
+  {
+    "id": 21,
+    "name": "Empregos",
+    "description": "Vagas de emprego e oportunidades de trabalho."
+  },
+  {
+    "id": 22,
+    "name": "Livros e Educação",
+    "description": "Livros, apostilas, cursos e materiais didáticos."
+  },
+  {
+    "id": 23,
+    "name": "Antiguidades e Arte",
+    "description": "Peças antigas, obras de arte e itens de coleção."
+  },
+  {
+    "id": 24,
+    "name": "Construção e Reformas",
+    "description": "Materiais de construção, ferramentas e serviços de obra."
+  }
+]
