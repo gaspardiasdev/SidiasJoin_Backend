@@ -24,18 +24,19 @@ async function bootstrap() {
   const swaggerPath = `api/doc`;
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle(swaggerTitle)
-    .setDescription(`
-      🚀 Status: MVP em desenvolvimento
-      🔐 Autenticação via JWT (Bearer Token)
-      📘 Use a rotas de login para obter seu token
-      🧑‍💻 Dev: René Kemalandua
-      📫 email: kemalanduar@gmail.com
-    `)
-    .addServer('http://localhost:3000', 'Development')
-    .setVersion('0.1')
-    .addBearerAuth()
-    .build();
+  .setTitle(swaggerTitle)
+  .setDescription(`
+    🚀 Status: MVP em desenvolvimento  
+    🔐 Autenticação via JWT (Bearer Token)  
+    📘 Use a rota de login para obter seu token  
+    🧑‍💻 Dev: René Kemalandua  
+    📫 Email: kemalanduar@gmail.com
+  `)
+  .addServer('http://localhost:3000', 'Development')
+  .addServer('https://sidiasjoin-backend.onrender.com', 'Production')
+  .setVersion('0.1')
+  .addBearerAuth()
+  .build();
   const swaggerDocument = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup(swaggerPath, app, swaggerDocument);
 
