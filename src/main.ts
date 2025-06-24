@@ -41,11 +41,11 @@ async function bootstrap() {
   SwaggerModule.setup(swaggerPath, app, swaggerDocument);
 
   // Server
-  const Port = 3000;
-  await app.listen(Port);
-  Logger.log(`Started at http://localhost:${Port}`, 'Sidias Join');
+  const PORT = process.env.PORT || 3000;
+  await app.listen(PORT);
+  Logger.log(`Started at http://localhost:${PORT}`, 'Sidias Join');
   Logger.log(
-    `API Doc at http://localhost:${Port}/${swaggerPath}`,
+    `API Doc at http://localhost:${PORT}/${swaggerPath}`,
     'Sidias Join',
   );
 }
